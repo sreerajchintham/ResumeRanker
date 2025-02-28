@@ -18,13 +18,10 @@ def xtrct_frm_docx(file_path):
 
 def opener(file_path):
     if file_path[-3:] =="pdf" :
-        print("pdf")
-        xtrct_frm_pdf(file_path=file_path)
+        test = xtrct_frm_pdf(file_path=file_path)
     elif file_path[-4:] == "docx":
-        print("docx")
-        xtrct_frm_docx(file_path)
+        text = xtrct_frm_docx(file_path)
     else:
-        print("neither")
-        return "Incorrect File Format 'pdf' and 'docx' only"
-
-print(opener("ResumeRanker/ACC_RESUME_TEMPLATE.docx"))
+        text = "Incorrect File Format 'pdf' and 'docx' only"
+    return text
+print(opener("ACC_RESUME_TEMPLATE.docx"))
